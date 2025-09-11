@@ -34,11 +34,10 @@ const Contact = () => {
               href="https://linkedin.com/in/saardhak" 
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center bg-white text-gradient-primary border-2 border-gradient-primary px-8 py-4 rounded-full text-lg font-medium button-hover hover:bg-gradient-primary hover:text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 transition"
-              style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }}
+              className="inline-flex items-center bg-gradient-primary text-white px-8 py-4 rounded-full text-lg font-medium button-hover hover:bg-gradient-primary-hover focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 transition"
             >
               <Linkedin className="w-5 h-5 mr-3" />
-              LinkedIn
+              Connect with me
             </a>
           </div>
         </div>

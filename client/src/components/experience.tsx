@@ -14,6 +14,7 @@ const Experience = () => {
     {
       title: "Biomedical Engineer",
       company: "Medical Device Startup",
+      logo: "/logos/veina.svg",
       location: "Baltimore, MD",
       duration: "2023 - Present",
       description: "Leading the development of innovative medical devices, including the Veina syringe project. Collaborating with cross-functional teams to bring breakthrough healthcare solutions from concept to clinical implementation.",
@@ -22,6 +23,7 @@ const Experience = () => {
     {
       title: "Research Associate",
       company: "Johns Hopkins University",
+      logo: "/logos/jhu.svg",
       location: "Baltimore, MD", 
       duration: "2022 - 2023",
       description: "Conducted cutting-edge research in biomedical engineering, focusing on medical device innovation and healthcare technology applications.",
@@ -30,6 +32,7 @@ const Experience = () => {
     {
       title: "Engineering Intern",
       company: "Healthcare Innovation Lab",
+      logo: "/logos/innovation-lab.svg",
       location: "Baltimore, MD",
       duration: "2021 - 2022",
       description: "Gained hands-on experience in medical device design and testing, working on projects that bridge engineering principles with clinical needs.",
@@ -65,6 +68,11 @@ const Experience = () => {
               <div className="bg-background dark:bg-neutral-800 rounded-3xl p-8 md:p-12 shadow-lg hover:shadow-xl transition-all duration-500 button-hover text-foreground dark:text-white hover-lift hover-glow">
                 <div className="grid md:grid-cols-3 gap-8">
                   <div className="md:col-span-1">
+                    {exp.logo && (
+                      <div className="mb-4 flex justify-center md:justify-start">
+                        <img src={exp.logo} alt={exp.company + ' logo'} className="h-16 w-16 object-contain" />
+                      </div>
+                    )}
                     <h3 className="text-2xl font-medium text-apple-text mb-4">{exp.title}</h3>
                     <div className="space-y-2 text-apple-gray">
                       <div className="flex items-center">

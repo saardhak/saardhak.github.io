@@ -29,10 +29,10 @@ const Home = ({ onFlipChange, ballTheme, darkMode, onToggleDarkMode }: { onFlipC
       <footer className="py-8 px-6 border-t border-gray-200 dark:border-gray-700">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
           <div className="text-apple-gray mb-4 md:mb-0">
-            © 2024 Saardhak. All rights reserved.
+            © 2025 Saardhak. All rights reserved.
           </div>
           <div className="text-apple-gray text-sm">
-            BME from Johns Hopkins University • Healthcare Innovation • Patient-Centered Design
+            Biomedical Engineering • Healthcare Innovation • Patient-Centered Design
           </div>
         </div>
       </footer>

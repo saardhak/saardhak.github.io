@@ -6,40 +6,6 @@ const Reflections = () => {
   const headerRef = useScrollAnimation();
   const subtitleRef = useScrollAnimation();
 
-  const blogPosts = [
-    {
-      id: 1,
-      title: "The Future of Medical Device Innovation",
-      excerpt: "Exploring how AI and machine learning are transforming healthcare technology...",
-      date: "March 2024",
-      category: "Innovation",
-      content: "Medical device innovation is at a crossroads. With the rapid advancement of artificial intelligence and machine learning, we're seeing unprecedented opportunities to create devices that not only treat symptoms but predict and prevent health issues before they arise..."
-    },
-    {
-      id: 2,
-      title: "Building Teams in Healthcare Startups",
-      excerpt: "Lessons learned from leading cross-functional teams in the medical device space...",
-      date: "February 2024",
-      category: "Leadership",
-      content: "Leading a healthcare startup team requires a unique blend of technical expertise, regulatory knowledge, and human-centered design thinking. The stakes are high, but so are the rewards when you get it right..."
-    },
-    {
-      id: 3,
-      title: "Patient-Centered Design in Medical Technology",
-      excerpt: "How putting patients first leads to better outcomes and more successful products...",
-      date: "January 2024",
-      category: "Design",
-      content: "True innovation in medical technology comes from understanding the patient journey from their perspective. It's not just about solving technical problems—it's about solving human problems..."
-    },
-    {
-      id: 4,
-      title: "The Intersection of Engineering and Entrepreneurship",
-      excerpt: "Bridging the gap between technical excellence and business success...",
-      date: "December 2023",
-      category: "Entrepreneurship",
-      content: "Engineering and entrepreneurship might seem like different worlds, but they're more connected than you might think. Both require systematic thinking, problem-solving, and the ability to iterate quickly..."
-    }
-  ];
 
   return (
     <section ref={sectionRef} id="reflections" className="py-32 px-6 bg-background dark:bg-neutral-900 section-transition">
@@ -50,44 +16,32 @@ const Reflections = () => {
               Reflections
             </h2>
           </div>
-          <div ref={subtitleRef} className="reveal">
-            <p className="text-xl text-apple-gray max-w-3xl mx-auto leading-relaxed">
-              Thoughts, insights, and lessons learned from my journey in healthcare innovation and entrepreneurship.
-            </p>
-          </div>
         </div>
 
-        {/* Blog Post Panel */}
-        <div className="relative max-w-6xl mx-auto overflow-hidden">
-          <div className="flex overflow-x-auto scrollbar-hide snap-x snap-mandatory gap-6 pb-6">
-            {blogPosts.map((post, index) => (
-              <div 
-                key={post.id}
-                className="flex-shrink-0 w-full max-w-2xl snap-center"
-              >
-                <div className="bg-white dark:bg-neutral-800 rounded-3xl p-8 md:p-12 shadow-lg border border-gray-200 dark:border-gray-700 h-full hover-lift hover-glow transition-all duration-300">
-                  <div className="mb-6">
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="text-sm text-gradient-primary font-medium">{post.category}</span>
-                      <span className="text-sm text-gray-500">{post.date}</span>
-                    </div>
-                    <h3 className="text-3xl font-medium text-apple-text mb-4">
-                      {post.title}
-                    </h3>
-                    <p className="text-lg text-apple-gray leading-relaxed">
-                      {post.content}
-                    </p>
-                  </div>
-                </div>
+        {/* Coming Soon Panel */}
+        <div className="relative max-w-4xl mx-auto">
+          <div className="bg-white dark:bg-neutral-800 rounded-3xl p-12 md:p-16 shadow-lg border border-gray-200 dark:border-gray-700 text-center">
+            <div className="mb-8">
+              <div className="w-24 h-24 mx-auto mb-6 bg-gradient-primary rounded-full flex items-center justify-center">
+                <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                </svg>
               </div>
-            ))}
-          </div>
-          
-          {/* Scroll indicator */}
-          <div className="text-center mt-6">
-            <span className="text-sm text-gray-500">
-              Scroll left/right to explore posts
-            </span>
+              <h3 className="text-4xl font-medium text-apple-text mb-4">
+                Coming Soon
+              </h3>
+              <p className="text-xl text-apple-gray leading-relaxed max-w-2xl mx-auto">
+                My thoughts, insights, and lessons learned from my journey in healthcare innovation and entrepreneurship. Stay tuned!
+              </p>
+            </div>
+            <div className="flex justify-center">
+              <div className="inline-flex items-center px-6 py-3 bg-gradient-primary text-white rounded-full text-sm font-medium">
+                <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-5 5-5-5h5v-5a7.5 7.5 0 00-15 0v5h5l-5 5-5-5h5v-5a7.5 7.5 0 0115 0v5z" />
+                </svg>
+                Subscribe for updates
+              </div>
+            </div>
           </div>
         </div>
       </div>

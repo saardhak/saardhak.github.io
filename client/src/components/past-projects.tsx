@@ -1,7 +1,6 @@
 import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 import { useSectionAnimation } from '@/hooks/use-section-animation';
 import { useState, useRef, useEffect } from 'react';
-import StetPulseLogo from './stetpulse-logo';
 
 const Portfolio = () => {
   const sectionRef = useSectionAnimation();
@@ -12,12 +11,12 @@ const Portfolio = () => {
     {
       title: 'Design Team Leader',
       company: 'Johns Hopkins Center for Bioengineering Innovation & Design',
-      logo: '/logos/jhu-cbid.png', // Place logo in public/logos/
+      logo: '/logos/KneeHab.png',
       role: 'Design Team Leader',
       location: 'Baltimore, MD, USA',
       period: 'Jan 2022 - Jun 2025',
       description: 'Managed an undergraduate engineering team to identify industry needs, research technologies, and develop new medical device concepts. Led product definition, regulatory research, and design control.',
-      skills: ['ISO 13485', 'ISO 14971', 'Design for Manufacturing', 'Mechanical Product Design', 'Design Control', '3D CAD', 'Medical Devices', 'Problem Solving'],
+      skills: ['Design for Manufacturing', 'Mechanical Product Design', 'Design Control', '3D CAD', 'Medical Devices', 'Problem Solving'],
     },
     {
       title: 'AI/ML Researcher',
@@ -52,22 +51,22 @@ const Portfolio = () => {
     {
       title: 'Co-Founder, Technical Lead',
       company: 'StetPulse LLC',
-      logo: 'stetpulse', // Special identifier for the custom logo component
+      logo: '/logos/StetPulse.png',
       role: 'Co-Founder, Technical Lead',
       location: 'Baltimore, MD, USA',
       period: 'Nov 2020 - May 2022',
       description: 'Designed and validated a UV-C lightbox for stethoscope sanitation to reduce COVID transmission. Piloted prototype at Johns Hopkins Hospital.',
-      skills: ['ISO 13485', 'Design for Manufacturing', 'Medical Devices', '3D CAD', 'Problem Solving'],
+      skills: ['Design for Manufacturing', 'Medical Devices', '3D CAD', 'Problem Solving'],
     },
     {
       title: 'Product Development Engineer, CAD & Design Lead, Co-Founder',
       company: 'Polair LLC',
-      logo: '/logos/polair.png',
+      logo: '/logos/Polair.png',
       role: 'Product Development Engineer, CAD & Design Lead, Co-Founder',
       location: 'Baltimore, MD, USA',
       period: 'Jul 2020 - May 2022',
       description: 'Won 2nd place and $250,000 in X-Prize Next-Gen Mask Challenge. Designed modular face mask, worked with Honeywell, and filed for patent.',
-      skills: ['ISO 13485', 'Design for Manufacturing', 'Injection Molding', '3D CAD', 'Medical Devices', 'Problem Solving'],
+      skills: ['Design for Manufacturing', 'Injection Molding', '3D CAD', 'Medical Devices', 'Problem Solving'],
       links: [
         { label: 'Polair Mask', url: 'https://www.polairmask.com/' },
         { label: 'JHU News', url: 'https://ventures.jhu.edu/news/student-engineers-polair-xprize-adaptable-surgical-mask/' },
@@ -76,8 +75,8 @@ const Portfolio = () => {
     {
       title: 'OcuSpeak',
       company: 'Clinical Diagnostics and Devices',
-      logo: '/logos/ocuspeak.png',
-      role: 'Team Member',
+      logo: '/logos/Ocuspeak.png',
+      role: 'Co-Inventor',
       location: 'Baltimore, MD',
       period: 'Jan 2024 – May 2024',
       description: 'An LLM-powered eye-tracking device to enhance communication for patients with ALS.',
@@ -87,7 +86,7 @@ const Portfolio = () => {
       title: 'Bobble',
       company: 'Biomedical Instrumentation and Design',
       logo: '/logos/bobble.png',
-      role: 'Team Member',
+      role: 'Co-Inventor',
       location: 'Baltimore, MD',
       period: 'Jun 2024 – Dec 2023',
       description: 'A bio-gaming headset for patients with quadriplegia allowing for mouse and key control using head movement.',
@@ -96,8 +95,8 @@ const Portfolio = () => {
     {
       title: 'FLIMPY',
       company: 'Computer Integrated Surgery',
-      logo: '/logos/flimpy.png',
-      role: 'Team Member',
+      logo: '/logos/CIS.png',
+      role: 'Co-Inventor',
       location: 'Baltimore, MD',
       period: 'Jan 2024 – May 2024',
       description: 'A 5-DOF Surgical Robotic System for MRI-compatible Lumbar Injection.',
@@ -188,16 +187,10 @@ const Portfolio = () => {
               >
                 {/* Front: logo, name, role */}
                 <div className="absolute w-full h-full backface-hidden bg-white dark:bg-neutral-800 rounded-2xl shadow-lg flex flex-col items-center justify-center p-6 border border-gray-200 dark:border-gray-700">
-                  {project.logo === "stetpulse" ? (
-                    <div className="mb-4">
-                      <StetPulseLogo size="small" />
-                    </div>
-                  ) : project.logo ? (
-                    <img src={project.logo} alt={project.company + ' logo'} className="h-16 mb-4" />
+                  {project.logo ? (
+                    <img src={project.logo} alt={project.company + ' logo'} className="h-48 w-auto max-w-full mb-6 object-contain" />
                   ) : null}
-                  <h3 className="text-xl font-semibold text-apple-text mb-2 text-center">{project.title}</h3>
-                  <div className="text-apple-gray text-center text-sm mb-1">{project.company}</div>
-                  <div className="text-apple-gray text-center text-sm mb-1">{project.role}</div>
+                  <div className="text-apple-gray text-center text-lg font-medium">{project.role}</div>
                 </div>
                 {/* Back: date, description, skills */}
                 <div className="absolute w-full h-full backface-hidden bg-background dark:bg-neutral-900 rounded-2xl shadow-lg flex flex-col items-center justify-center p-6 rotate-y-180 border border-gray-200 dark:border-gray-700">
