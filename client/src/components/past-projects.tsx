@@ -21,7 +21,7 @@ const Portfolio = () => {
     {
       title: 'AI/ML Researcher',
       company: 'Universidad Carlos III de Madrid',
-      logo: '/logos/uc3m.png',
+      logo: '/logos/Uc3m.png',
       role: 'Artificial Intelligence and Machine Learning Researcher',
       location: 'Leganés, Spain',
       period: 'May 2023 - Jul 2023',
@@ -31,7 +31,7 @@ const Portfolio = () => {
     {
       title: 'Co-Founder, Technical Lead',
       company: 'InVenimus',
-      logo: '/logos/invenimus.png',
+      logo: '/logos/InVenimus.png',
       role: 'Co-Founder, Technical Lead',
       location: 'Baltimore, MD, USA',
       period: 'Jan 2021 - May 2023',
@@ -41,7 +41,7 @@ const Portfolio = () => {
     {
       title: 'R&D Engineering Intern',
       company: 'Optosurgical LLC',
-      logo: '/logos/optosurgical.png',
+      logo: '/logos/Optosurgical.png',
       role: 'Research and Development Engineering Intern',
       location: 'Columbia, MD, USA',
       period: 'May 2022 - Aug 2022',
@@ -85,7 +85,7 @@ const Portfolio = () => {
     {
       title: 'Bobble',
       company: 'Biomedical Instrumentation and Design',
-      logo: '/logos/bobble.png',
+      logo: '/logos/Bobble.png',
       role: 'Co-Inventor',
       location: 'Baltimore, MD',
       period: 'Jun 2024 – Dec 2023',
