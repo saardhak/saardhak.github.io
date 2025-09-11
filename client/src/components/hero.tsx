@@ -456,13 +456,13 @@ const Hero = ({ children, onFlipChange, ballTheme, darkMode, onToggleDarkMode }:
         typingRef.current.style.justifyContent = 'center';
       }
       // Update block style directly
+      
       if (blockRef.current) {
         blockRef.current.style.fontSize = Math.min(
           fontSize,
-          // keep name within visible screen width, accounting for page padding (px-6 => 48)
+          // keep name within visible screen width, accounting for page padding (px-6 => 48px)
           (((window as any).visualViewport?.width ?? window.innerWidth) - 48) / (maxFlipLength * 0.6)
         ) + 'px';
-        
         blockRef.current.style.left = '50%';
         blockRef.current.style.top = `${centerY}px`;
         blockRef.current.style.transform = 'translate(-50%, -50%)';
