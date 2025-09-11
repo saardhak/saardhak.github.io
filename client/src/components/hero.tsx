@@ -439,7 +439,7 @@ const Hero = ({ children, onFlipChange, ballTheme, darkMode, onToggleDarkMode }:
         let tempCenterY = Math.max(minCenter, Math.min(idealCenter, maxCenter));
         centerY = tempCenterY;
         // Show nav bar if block's bottom is at or above nav bar's top, with overlap threshold
-        const blockBottom = centerY + blockHeight / 2;
+        const blockBottom = centerY + Height / 2;
         setHeroPinned(fontSize <= navBarFontSize);
       }
       // Dynamically reduce margin between Saardhak and subtitle as it shrinks
@@ -459,8 +459,8 @@ const Hero = ({ children, onFlipChange, ballTheme, darkMode, onToggleDarkMode }:
       if (blockRef.current) {
         blockRef.current.style.fontSize = Math.min(
           fontSize,
-          // keep name within visible screen width, accounting for page padding (px-6 => 48px)
-          (((window as any).visualViewport?.width ?? window.innerWidth) - 48) / (maxFlipLength * 0.6)
+          // keep name within visible screen width, accounting for page padding (px-6 => 48 -> 12px)
+          (((window as any).visualViewport?.width ?? window.innerWidth) - 12) / (maxFlipLength * 0.6)
         ) + 'px';
         
         blockRef.current.style.left = '50%';
