@@ -37,11 +37,14 @@ const VeinaProject = () => {
             </p>
           </div>
         </div>
+        <div>
+          <h3 className="text-3xl font-medium mb-6 text-apple-text">Hemolysis at a Glance</h3>
+        </div>
         <div className="grid md:grid-cols-3 gap-8 mt-12 mb-16">
           <div ref={stat1Ref} className="reveal text-center">
-            <div className="text-6xl font-bold text-red-500 mb-4">1 out of 6</div>
-            <h4 className="text-2xl font-bold mb-3 text-red-500">National Average</h4>
-            <p className="text-lg font-semibold text-apple-gray">blood samples hemolyze</p>
+            <div className="text-6xl font-bold text-red-500 mb-4">1 of every 6</div>
+            <h4 className="text-2xl font-bold mb-3 text-red-500">Blood samples hemolyze</h4>
+            <p className="text-lg font-semibold text-apple-gray">in Emergency Departments Nationwide</p>
           </div>
           <div ref={stat2Ref} className="reveal text-center">
             <div className="text-6xl font-bold text-red-500 mb-4">$17B</div>
