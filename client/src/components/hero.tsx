@@ -459,8 +459,8 @@ const Hero = ({ children, onFlipChange, ballTheme, darkMode, onToggleDarkMode }:
       if (blockRef.current) {
         blockRef.current.style.fontSize = Math.min(
           fontSize,
-          // keep name within visible screen width, accounting for page padding (px-6 => 48 -> 12px)
-          (((window as any).visualViewport?.width ?? window.innerWidth) - 12) / (maxFlipLength * 0.6)
+          // keep name within visible screen width, accounting for page padding (px-6 => 48 -> 24px)
+          (((window as any).visualViewport?.width ?? window.innerWidth) - 24) / (maxFlipLength * 0.6)
         ) + 'px';
         
         blockRef.current.style.left = '50%';
