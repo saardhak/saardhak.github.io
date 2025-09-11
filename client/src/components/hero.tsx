@@ -525,7 +525,7 @@ const Hero = ({ children, onFlipChange, ballTheme, darkMode, onToggleDarkMode }:
   return (
     <FlipContext.Provider value={{ flipped }}>
       <SubtitleContext.Provider value={{ currentText, cursor }}>
-        <section ref={sectionRef} id="home" className="min-h-screen flex flex-col items-center justify-center px-6 relative overflow-hidden bg-background text-foreground dark:bg-neutral-900 dark:text-white">
+        <section ref={sectionRef} id="home" className="min-h-[100svh] flex flex-col items-center justify-center px-6 relative overflow-hidden bg-background text-foreground dark:bg-neutral-900 dark:text-white">
           {/* Canvas overlay for animated dots */}
           <canvas
             ref={canvasRef}
